@@ -22,7 +22,7 @@ body {
 /* Header styles */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px 0;
   background-color: #4b4b4b;
@@ -68,7 +68,6 @@ body {
 
 .hero p {
   font-size: 20px;
-  margin-bottom: 30px;
 }
 
 /* Logo styles */
@@ -93,13 +92,15 @@ body {
 }
 
 .about p {
-  font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Added spacing between paragraphs */
 }
 
 /* Services styles */
 .services {
   padding: 40px 0;
+  display: flex;
+  justify-content: center; /* Center the card container horizontally */
 }
 
 .services h2 {
@@ -107,28 +108,55 @@ body {
   margin-bottom: 20px;
 }
 
-.services ul {
-  list-style: none;
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 20px; /* Add spacing between the cards */
 }
 
-.services li {
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the contents of the cards */
+  height: 200px; /* Adjusted card height to be half of the original size */
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  max-width: 75%;
+  max-height: 75%; /* Adjusted image size to fit within the card */
+  display: block;
+  margin: 10px auto 20px; /* Added spacing between the image and text */
+  border-radius: 50%; /* Make the card image circular */
+  overflow: hidden; /* Hide any parts of the image outside the circle */
+}
+
+/* Center the "Contact Us" button */
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 20px;
+  background-color: #0099cc;
+  color: #fff;
+  text-decoration: none;
   font-size: 18px;
-  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
 }
 
-/* Contact styles */
-.contact {
-  padding: 40px 0;
-}
-
-.contact h2 {
-  font-size: 36px; /* Same size as other section headers */
-  margin-bottom: 20px;
-}
-
-.contact p {
-  font-size: 18px;
-  line-height: 1.8;
+.btn:hover,
+.btn:focus {
+  background-color: #0088b3;
 }
 
 /* Footer styles */
@@ -158,7 +186,9 @@ body {
   .about h2 {
     font-size: 30px;
   }
-  .services h2 {
-    font-size: 30px;
+
+  /* Adjusted the grid template to be 1 column on smaller screens */
+  .card-container {
+    grid-template-columns: 1fr;
   }
 }
