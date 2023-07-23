@@ -61,9 +61,10 @@
     color: #fff;
   }
   
-  .hero h1 {
+  .hero h1.title {
     font-size: 48px;
     margin-bottom: 10px;
+    font-family: 'Lobster', cursive;
   }
   
   .hero p {
@@ -87,15 +88,15 @@
     padding: 40px 0;
   }
   
-  .about h2 {
-    font-size: 36px;
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
     margin-bottom: 20px;
-    font-family: 'Lobster', cursive;
   }
   
-  .about p {
-    font-size: 18px;
-    line-height: 1.8;
+  .about-text {
+    text-align: left;
   }
   
   /* Services styles */
@@ -107,62 +108,48 @@
     font-size: 36px;
     margin-bottom: 20px;
     font-family: 'Lobster', cursive;
+    text-align: center;
   }
   
-  .services ul {
+  .services-list {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   
-  .services li {
+  .services-list li {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .services-list li p {
     font-size: 18px;
-    margin-bottom: 10px;
+    line-height: 1.4;
   }
   
   /* Contact styles */
   .contact {
     padding: 40px 0;
-  }
-  
-  .contact h2 {
-    font-size: 36px; /* Same size as other section headers */
-    margin-bottom: 20px;
-    font-family: 'Lobster', cursive;
-  }
-  
-  .contact p {
-    font-size: 18px;
-    line-height: 1.8;
-  }
-  
-  /* Footer styles */
-  .footer {
-    text-align: center;
-    padding: 20px 0;
     background-color: #4b4b4b; /* Slate Gray */
     color: #fff;
   }
   
-  .footer p {
-    font-size: 14px;
+  .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
   }
   
-  /* Media queries for responsive design (optional) */
-  @media screen and (max-width: 768px) {
-    .hero h1 {
-      font-size: 36px;
-    }
-    .hero p {
-      font-size: 16px;
-    }
-    .btn {
-      font-size: 14px;
-      padding: 10px 20px;
-    }
-    .about h2 {
-      font-size: 30px;
-    }
-    .services h2 {
-      font-size: 30px;
-    }
+  .contact p {
+    font-size: 20px;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
   }
   
